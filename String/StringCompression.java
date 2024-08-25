@@ -3,20 +3,20 @@
  */
 public class StringCompression {
     public static String Compression(String str){
-        StringBuilder str1=new StringBuilder("");
+        String str1="";
         int cnt;
         for(int i=0;i<str.length();){
             cnt=0;
-            char ch=str.charAt(i);
-            str1.append(str.charAt(i++));
+            char ch=str.charAt(i++);
+            str1+=ch;
             cnt++;
             while(i<=str.length()-1 && str.charAt(i)==ch){
                 cnt++;
                 i++;
             }
-            str1.append(cnt);
+            str1+=cnt;
         }
-        return str1.toString();
+        return str1;
     }
 
     public static void main(String[] args) {
