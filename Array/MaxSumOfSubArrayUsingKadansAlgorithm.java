@@ -5,7 +5,7 @@ public class MaxSumOfSubArrayUsingKadansAlgorithm {
         int Max=Integer.MIN_VALUE;
 
         for(int i=0;i<arr.length;i++){
-            currentSum=currentSum+arr[i] >0?currentSum+arr[i]:0;
+            currentSum= currentSum+arr[i] > 0? currentSum+arr[i]:0;
             if(currentSum>Max){
                 Max=currentSum;
             }

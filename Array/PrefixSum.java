@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+
 
 public class PrefixSum {
     public static int Prefix(int arr[]) {

@@ -14,7 +14,7 @@ public class TwoDArrayList {
 
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++){
-         System.err.print(list.get(i).get(j)+" ");
+         System.out.print(list.get(i).get(j)+" ");
             }
 System.out.println();
         }
