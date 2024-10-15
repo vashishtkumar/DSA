@@ -45,7 +45,8 @@ class FormBinaryTree {
 
     // tree traversal
 
-    //preOrder
+    //preOrder  tc=O(n) sc=O(1);
+
     static void preorder(Node root){
         if(root==null){
             return;
