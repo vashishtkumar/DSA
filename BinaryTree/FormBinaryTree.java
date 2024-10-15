@@ -39,8 +39,21 @@ class FormBinaryTree {
             i++;
         }
           return root;
-
         }
+    }
+
+
+    // tree traversal
+
+    //preOrder
+    static void preorder(Node root){
+        if(root==null){
+            return;
+        }
+       
+        System.out.print(root.data);
+         preorder(root.left);
+         preorder(root.right);
     }
 
     
@@ -50,7 +63,9 @@ class FormBinaryTree {
         int arr[]={1,2,3,-1,5,-1,4};
         BinaryTree tree1=new BinaryTree();
         Node root=tree1.treeformation(arr);
-        System.out.println(root.data);
+        System.out.println("this is head of the data =" + root.data);
+        preorder(root);
+        
     }
 
 }
