@@ -79,6 +79,25 @@ class FormBinaryTree {
       System.out.print(root.data);
     }
 
+    //levelOrder traversal tc=O(n)  sc=O(n)
+    static void levelorder(Node root){
+        if(root==null){
+            return;
+        }
+        Queue<Node> queue=new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+           Node currNode=queue.poll();
+           System.out.print(currNode.data);
+           if(currNode.left!=null){
+            queue.add(currNode.left);
+           }
+           if(currNode.right !=null){
+            queue.add(currNode.right);
+           }
+        }
+    }
+
 
     public static void main(String[] args) {
         int arr[]={1,2,3,-1,5,-1,4};
@@ -93,6 +112,9 @@ class FormBinaryTree {
         System.out.println();
         System.out.println("postorder traversal");
         postorder(root);
+        System.out.println();
+        System.out.println("LevelOrder traversal");
+        levelorder(root);
     }
 
 }
