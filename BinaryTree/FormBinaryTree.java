@@ -57,7 +57,16 @@ class FormBinaryTree {
          preorder(root.right);
     }
 
-    
+    //postOrder traversal tc=O(n) sc=O(1)
+
+    static  void Inorder(Node root){
+        if(root==null){
+            return;
+        }
+        Inorder(root.left);
+        System.out.print(root.data);
+        Inorder(root.right);
+    }
 
 
     public static void main(String[] args) {
@@ -65,7 +74,11 @@ class FormBinaryTree {
         BinaryTree tree1=new BinaryTree();
         Node root=tree1.treeformation(arr);
         System.out.println("this is head of the data =" + root.data);
+        System.out.println("preorder trevaersal");
         preorder(root);
+        System.out.println();
+        System.out.println("Inorder traversal");
+        Inorder(root);
         
     }
 
